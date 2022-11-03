@@ -7,5 +7,5 @@ interface AnswersDao {
     @Query("SELECT * FROM answer")
     fun getAll():List<Answer>
     @Query("SELECT * FROM answer LIMIT (:lim)")
-    fun getAll(lim:Int):List<Answer>
+    fun getAll(lim:Int): List<Answer>
 }
