@@ -5,8 +5,11 @@ import androidx.room.Room
 import com.adrianov.pddmaster.core.repositories.ReadRepository
 import com.adrianov.pddmaster.data.local.db.PddDataBase
 import com.adrianov.pddmaster.domain.models.Question
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class QuestionsRepository(context: Context) : ReadRepository<Long, Question> {
+@Singleton
+class QuestionsRepository(@Inject val context: Context) : ReadRepository<Long, Question> {
 
     private val db = Room.databaseBuilder(context.applicationContext,
         PddDataBase::class.java,
