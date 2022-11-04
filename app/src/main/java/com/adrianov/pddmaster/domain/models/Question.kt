@@ -1,10 +1,10 @@
 package com.adrianov.pddmaster.domain.models
 
-data class Question(val id:Int,
-                    val text: String = "empty",
-                    val questionImage: String,
-                    val answers:List<Answer>,
-                    val answer: Answer
+data class Question(var id:Long,
+                    var text: String = "empty",
+                    var questionImage: String,
+                    var answers:List<Answer>,
+                    var answer: Answer
 ){
 
 }

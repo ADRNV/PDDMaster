@@ -8,4 +8,8 @@ interface AnswersDao {
     fun getAll():List<Answer>
     @Query("SELECT * FROM answer LIMIT (:lim)")
     fun getAll(lim:Int): List<Answer>
+    @Query("SELECT * FROM answer WHERE answerId=(:id)")
+    fun get(id:Long):Answer
+    @Query("SELECT * FROM answer WHERE relatedQuestionId=(:id)")
+    fun getRelated(id:Long):List<Answer>
 }
